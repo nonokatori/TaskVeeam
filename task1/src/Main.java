@@ -3,11 +3,11 @@ public class Main {
     public static void main(String[] args) {
         InfoDisk info = new InfoDisk();
         if (args.length != 1) {
-            System.out.println("Введите путь к файлу");
+            System.out.println("Enter the path to the file.");
             return;
         }
 
-        info.createStringInfo(info.readFile(args[0]));
+        info.createStringInfo(args[0]);
 
     }
 

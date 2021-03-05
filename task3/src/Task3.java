@@ -22,7 +22,6 @@ public class Task3 {
         String[] strings;
         StringBuilder sb = new StringBuilder();
 
-
         try(BufferedReader reader = new BufferedReader(new InputStreamReader(
                 new FileInputStream(pathTofile), "UTF8"))) {
             while ((s=reader.readLine())!=null)

@@ -10,7 +10,6 @@ import java.util.regex.Pattern;
 
 public class Service {
 
-
     private String name;
     private String type;
     private HashMap<String,String> param = new HashMap<>();

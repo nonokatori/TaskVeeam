@@ -13,19 +13,17 @@ public class InfoDisk {
     private StringBuilder sb = new StringBuilder();
 
 
-    public String readFile(String pathFile) {
+    public void createStringInfo (String pathFile) {
 
         try(FileReader fr = new FileReader(pathFile); BufferedReader reader = new BufferedReader(fr)) {
             name = reader.readLine();
         } catch (FileNotFoundException e) {
-            System.out.println("Некорректный путь к файлу");
+            System.out.println("Invalid file path.");
+            return;
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return name;
-    }
 
-    public void createStringInfo (String path) {
         String resCmd = executeCommand(String.format("lsblk -d %s", name));
         if (resCmd==null) {
             System.out.println("This path on file is not suitable for the given command, please try again.");
